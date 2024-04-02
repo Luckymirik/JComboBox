@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 
 public class Main {
     static JPanel panel = new JPanel();
-    static void addObject(JComponent component,int n,float alignmentX){
-        component.setAlignmentX(alignmentX);
+    static void addObject(JComponent component,int n){
+        component.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(component);
         panel.add(Box.createVerticalStrut(n));
     }
@@ -22,21 +22,21 @@ public class Main {
         comboBox.addItem("Черный");
         comboBox.addItem("Синий");
         comboBox.setMaximumSize(new Dimension(100,30));
-        addObject(comboBox,10,Component.CENTER_ALIGNMENT);
+        addObject(comboBox,10);
 
         JCheckBox checkBox = new JCheckBox("Свой вариант");
-        addObject(checkBox,10,Component.CENTER_ALIGNMENT);
+        addObject(checkBox,10);
 
         JTextField textField = new JTextField();
         textField.setEnabled(false);
         textField.setMaximumSize(new Dimension(100,30));
-        addObject(textField, 10, Component.CENTER_ALIGNMENT);
+        addObject(textField, 10);
 
         JButton button = new JButton("Ответить");
-        addObject(button,10,Component.CENTER_ALIGNMENT);
+        addObject(button,10);
 
         JLabel label = new JLabel("Ответ: ");
-        addObject(label,10,Component.CENTER_ALIGNMENT);
+        addObject(label,10);
 
         button.addActionListener(new ActionListener() {
             @Override
