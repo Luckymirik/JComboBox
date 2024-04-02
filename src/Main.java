@@ -5,10 +5,10 @@ import java.awt.event.ActionListener;
 
 public class Main {
     static JPanel panel = new JPanel();
-    static void addObject(JComponent component,int n){
+    static void addObject(JComponent component){
         component.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(component);
-        panel.add(Box.createVerticalStrut(n));
+        panel.add(Box.createVerticalStrut(10));
     }
     public static void main(String[] args) {
         panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
@@ -22,21 +22,21 @@ public class Main {
         comboBox.addItem("Черный");
         comboBox.addItem("Синий");
         comboBox.setMaximumSize(new Dimension(100,30));
-        addObject(comboBox,10);
+        addObject(comboBox);
 
         JCheckBox checkBox = new JCheckBox("Свой вариант");
-        addObject(checkBox,10);
+        addObject(checkBox);
 
         JTextField textField = new JTextField();
         textField.setEnabled(false);
         textField.setMaximumSize(new Dimension(100,30));
-        addObject(textField, 10);
+        addObject(textField);
 
         JButton button = new JButton("Ответить");
-        addObject(button,10);
+        addObject(button);
 
         JLabel label = new JLabel("Ответ: ");
-        addObject(label,10);
+        addObject(label);
 
         button.addActionListener(new ActionListener() {
             @Override
